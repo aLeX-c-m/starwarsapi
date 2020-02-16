@@ -1,0 +1,50 @@
+
+@font-face { 
+    font-family: StarWars;
+    src: url(Stjldbl2.ttf);
+ }
+
+
+@font-face { 
+    font-family: StarWars2;
+    src: url(Starjhol.ttf);
+ }
+
+ @keyframes rainbow { 
+    0%{background-position:0% 82%}
+    50%{background-position:100% 19%}
+    100%{background-position:0% 82%}
+}
+
+ul{
+    color: white;
+    font-family: StarWars;
+    align-content: center;
+    padding: 20px;
+}
+
+li{
+    color: white;
+    font-family: StarWars2;
+    font-size: 18px;
+    align-content: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+#app { 
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+    margin-top: 0px;
+    position: absolute;
+    background:linear-gradient(179deg, #000000, #3f3e3e,#6e6e6e, #1b1b1b);
+    background-size: 1000% 1000%;
+    -webkit-animation: rainbow 10s ease infinite;
+}
+
+
+
+
+  

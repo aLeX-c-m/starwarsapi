@@ -7,7 +7,7 @@
 
 @font-face { 
     font-family: StarWars2;
-    src: url(Starjhol.ttf);
+    src: url(Starjedi.ttf);
  }
 
  @keyframes rainbow { 
@@ -24,8 +24,8 @@ ul{
 }
 
 li{
-    color: white;
-    font-family: StarWars2;
+    color: rgb(252, 252, 135);
+    font-family: StarWars;
     font-size: 18px;
     align-content: center;
     margin: 10px;
@@ -35,13 +35,14 @@ li{
 #app { 
     justify-content: center;
     align-items: center;
-    height: 100%;
-    width: 100%;
+    min-height: 100%;
     margin-top: 0px;
     position: absolute;
     background:linear-gradient(179deg, #000000, #3f3e3e,#6e6e6e, #1b1b1b);
-    background-size: 1000% 1000%;
+    background-size: 1500% 1500%;
     -webkit-animation: rainbow 10s ease infinite;
+    display: flex;
+    flex-direction: column;
 }
 
 

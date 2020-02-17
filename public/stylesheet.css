@@ -35,9 +35,7 @@ li{
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    align-content: center;
-    margin: 10px;
-    padding: 10px;
+    justify-content: center;
     list-style-type: disc;
     text-decoration: none;
     width: 100%;
@@ -46,12 +44,11 @@ li{
 }
 
 #app { 
-    justify-content: center;
-    align-items: center;
     min-height: 100%;
     margin: 0px;
+    align-items: center;
     position: absolute;
-    background:linear-gradient(179deg, #000000, #3f3e3e,#6e6e6e, #1b1b1b);
+    background:linear-gradient(179deg, #000000, #3f3e3e,#302f2f, #1b1b1b);
     background-size: 1500% 1500%;
     -webkit-animation: rainbow 10s ease infinite;
     display: flex;
@@ -63,25 +60,11 @@ div{
     color: white;
     font-family: 'Courier New', Courier, monospace;
     font-size: 14px;
-    align-content: center;
-    margin: 10px;
+    align-items: center;
+    margin: auto;
     padding: 10px; 
 }
- 
-input{
-    font-size: 12px;
-    align-content: center;
-    margin: 10px;
-    padding: 5px; 
-}
 
-#submission {
-    border: 1px solid white;
-    display: flex;
-    flex-direction: column;
-    max-width: 250px;
-    margin: auto;
-}
 
 body{
     margin:0px;

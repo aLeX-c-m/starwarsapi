@@ -1,37 +1,15 @@
 <template>
 <div>
-<button v-on:click="height = !height"> Height</button>
-<button v-on:click="mass = !mass"> Mass</button>
-<button v-on:click="eyecolor = !eyecolor"> Eye Color</button>
-<button v-on:click="haircolor = !haircolor"> Hair Color</button>
-<button v-on:click="birthyear = !birthyear"> Birthyear</button>
+<button v-bind:aria-label="height ? 'Hide Height' : 'Reveal Height'" v-on:click="height = !height">Height</button>
+<button v-bind:aria-label="mass ? 'Hide Mass' : 'Reveal Mass'" v-on:click="mass = !mass">Mass</button>
+<button v-bind:aria-label="eyecolor ? 'Hide Eye Color' : 'Reveal Eye Color'" v-on:click="eyecolor = !eyecolor">Eye Color</button>
+<button v-bind:aria-label="haircolor ? 'Hide Hair Color' : 'Reveal Hair Color'" v-on:click="haircolor = !haircolor">Hair Color</button>
+<button v-bind:aria-label="birthyear ? 'Hide Birth Year' : 'Reveal Birth Year'" v-on:click="birthyear = !birthyear">Birth Year</button>
   
   <ul>StarWars:
-  <div id="submission">
-  <br>
-  name:
-  <input type="text" name="name" />
-  <br>
-  height: 
-  <input type="text" name="height" />
-  <br>
-  mass: 
-  <input type="text" name="mass" />
-  <br>
-  eye color:
-  <input type="text" name="eye color" />
-  <br>
-  hair color:
-  <input type="text" name="hair color" />
-  <br>
-  birth year:
-  <input type="text" name="birth year" />
-  <br>
-  <input id="button" type="submit" value="add new character" />
-  </div>
-  <li v-for="war in wars" v-bind:key="war.url">
+  <div v-for="war in wars" v-bind:key="war.url">
   <StarWar v-bind:war="war" v-bind:showheight= "height" v-bind:showmass="mass" v-bind:showeyecolor="eyecolor" v-bind:showhaircolor="haircolor" v-bind:showbirthyear="birthyear"></StarWar>
-  </li>
+  </div>
   </ul>
   </div>
 </template>
@@ -56,11 +34,18 @@
       axios
         .get('https://swapi.co/api/people')
         .then(res => {
+          console.log('results from api/people call', res.data.results)
           this.wars = res.data.results;
         })
     },
     components: {
-    StarWar
-  }
+      StarWar
+    },
+    methods: {
+      greet: (text) => {
+        axios.post('/', text)
+        console.log('posted')
+      }
+    }
   }
 </script>

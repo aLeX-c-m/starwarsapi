@@ -5,11 +5,6 @@
  }
 
 
-@font-face { 
-    font-family: StarWars2;
-    src: url(Starjedi.ttf);
- }
-
  @keyframes rainbow { 
     0%{background-position:0% 82%}
     50%{background-position:100% 19%}
@@ -17,33 +12,81 @@
 }
 
 ul{
-    color: white;
+    color: rgb(245, 232, 121);
     font-family: StarWars;
     align-content: center;
+    text-align: center;
     padding: 20px;
+    font-size: 34px;
+}
+
+button, #button{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    align-content: center;
+    padding: 20px;
+    background-color: #00000000;
+    border: none;
+    text-decoration: underline;
+    font-size: 14px;
 }
 
 li{
-    color: rgb(252, 252, 135);
-    font-family: StarWars;
-    font-size: 18px;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
     align-content: center;
     margin: 10px;
     padding: 10px;
+    list-style-type: disc;
+    text-decoration: none;
+    width: 100%;
+    margin: auto;
+    list-style: none;
 }
 
 #app { 
     justify-content: center;
     align-items: center;
     min-height: 100%;
-    margin-top: 0px;
+    margin: 0px;
     position: absolute;
     background:linear-gradient(179deg, #000000, #3f3e3e,#6e6e6e, #1b1b1b);
     background-size: 1500% 1500%;
     -webkit-animation: rainbow 10s ease infinite;
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
+
+div{
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 14px;
+    align-content: center;
+    margin: 10px;
+    padding: 10px; 
+}
+ 
+input{
+    font-size: 12px;
+    align-content: center;
+    margin: 10px;
+    padding: 5px; 
+}
+
+#submission {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column;
+    max-width: 250px;
+    margin: auto;
+}
+
+body{
+    margin:0px;
+}
+
 
 
 
